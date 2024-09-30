@@ -86,3 +86,64 @@ exit(1);
       return s;
   }
 }
+
+
+
+Input:
+ arr[1,1,2,2,2,3,3]
+
+Output:
+ arr[1,2,3,_,_,_,_]
+
+#include<stdio.h>
+int x=1;
+void check(int [],int,int,int);
+void main()
+{
+  int n,i=1,j=2;
+  printf("\nEnter the size of arrays= ");
+  scanf("%d",&n);
+  int a[n];
+  for(i=1;i<=n;i++)
+  {
+      scanf("%d",&a[i]);
+  }
+  check(a,1,2,n);
+  
+}
+
+void check(int a[],int i,int j,int n)
+{
+    int s[n];
+  if(j>n)
+  {
+      for(i=1;i<=n;i++)
+      {
+          if(i>x)
+          {
+              printf(",_");
+              
+          }
+          printf("%d",s[x]);
+          
+      }
+      if(i>n)
+      {
+          exit(1);
+      }
+     
+      
+  }
+  while(a[i]==a[j])
+  {
+      j=j+1;
+  }
+  
+  s[x]=a[i];
+  x=x+1;
+  i=j;
+  j=j+1;
+  return check(a,i,j,n);
+}
+
+//INCOMPLETE
