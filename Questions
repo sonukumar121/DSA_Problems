@@ -147,3 +147,36 @@ void check(int a[],int i,int j,int n)
 }
 
 //INCOMPLETE
+Input: n = 5, arr[] = [2,3,1,2,3]
+Output: 2 3 
+Explanation: 2 and 3 occur more than once in the given array.
+
+#include<stdio.h>
+
+int main()
+{
+	int n,i,j;
+	printf("\nEnter the size of array= ");
+	scanf("%d",&n);
+	int a[n];
+	for(i=1;i<=n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	for(i=1;i<=n;i++)
+	{
+		if(i==n)
+		{
+		  printf("-1");	
+		  break;
+		}
+		for(j=i+1;j<=n;j++)
+		{
+			if(a[i]==a[j])
+			{
+				printf("%d ",a[i]);
+			}
+		}
+		
+	}
+}
